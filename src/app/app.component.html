@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<li *ngFor="let product of products">
+  <div>
+    {{product.pid}}
+    {{product.pname}}
+    {{product.pqty}}
+    {{product.pprice}}
+    <button (click)="delete(product)">X</button>
+    <br>
+  </div>
+</li>
+<input type="text" placeholder="enter product id" #prodid>&nbsp;
+<input type="text" placeholder="enter product name" #prodName>&nbsp;
+<input type="text" placeholder="enter product qty" #prodQty>&nbsp;
+<input type="text" placeholder="enter product price" #prodPrice>&nbsp;
+<button (click)="takeInput(prodid.value,prodName.value,prodQty.value,prodPrice.value)">Add</button>
+<button (click)="updateById(prodid.value,prodName.value,prodQty.value,prodPrice.value)">update by product id</button>
